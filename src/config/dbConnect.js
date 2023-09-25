@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 
 async function conectaNaDatabase() {
-  mongoose.connect(process.env.DB_CONNECTION_STRING);
-
-  return mongoose.connection;
+    mongoose.connect(
+      "mongodb+srv://labuser:<password>@cluster0.fwpzito.mongodb.net/livraria?retryWrites=true&w=majority"
+    );
+    
+    return mongoose.connection;
 }
 
 export default conectaNaDatabase;
